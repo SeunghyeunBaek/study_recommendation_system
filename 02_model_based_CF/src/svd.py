@@ -25,8 +25,6 @@ def get_completed_matrix():
     # Make movie-user matrix
     merge_df = pd.merge(left=rating_df, right=movie_df, on='movieId', how='left')
     user_movie_matrix = merge_df.pivot_table(values='rating', index='userId', columns='title').fillna(0)
-    # print(user_movie_matrix)
-    # movie_user_matrix = user_movie_matrix.values.T
 
     # A = USV
     u, sigma, vt = svds(user_movie_matrix, k=50) # Number of latents

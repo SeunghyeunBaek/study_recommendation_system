@@ -4,10 +4,6 @@
 
 TOC
 
-
-
-
-
 ## 협업 필터링(Collaborativ filtering, CF)
 
 * 협업 필터링의 종류
@@ -66,21 +62,20 @@ TOC
   * user 는 Latent factor 로 구성된 벡터 공간에서 가까운 item 을 좋아할 것이다.
   * user - latent factor x latent factor - item 이 기존 데이터를 잘 재현 한다면, 결측값도 잘 예측할 수 있다.
 
-* which indirectly
-reflects opinion by observing user behavior including purchase history, browsing history, search patterns, or even
-mouse movements. 
-
 ### SVD(Singular value decomposition)
 
+* 행렬 분해 기법
+* Sparse matrix 에서는 잘 작동하지 않음
 
+### SGD(Stochastic Gradient Descent)
 
-### SGD
+* 평점이 존재하는 부분에 대해 행렬 분해 후 오차를 최소화 하는 방향으로 학습
+* User latent, Item latent 를 동시에 최적화
+* SVD에 비해 결측치를 잘 처리할 수 있음
 
+### ALS(Alternating Least Squares)
 
-
-### ALS
-
-
+* User latent, Item latent 행렬 중 하나를 고정한채로 최적화 진행
 
 ## Logistic MF
 
@@ -97,4 +92,9 @@ mouse movements.
   * [Matrix Factorization Techniques for recommender systems](https://datajobs.com/data-science-repo/Recommender-Systems-[Netflix].pdf)
   * [Neural Collaborative Filtering](https://arxiv.org/pdf/1708.05031.pdf)
   * [Neural Collaborative Filtering 리뷰](https://leehyejin91.github.io/post-ncf/)
+  * [03. 협업필터링 기반 추천시스템 - SGD](https://eda-ai-lab.tistory.com/528)
+
+  * [Matrix Factorization에 대해 이해, Alternating Least Square (ALS) 이해](https://yeo0.github.io/data/2019/02/23/Recommendation-System_Day8/#_title)
+
+    
 
