@@ -61,6 +61,15 @@ TOC
 * 가정
   * user 는 Latent factor 로 구성된 벡터 공간에서 가까운 item 을 좋아할 것이다.
   * user - latent factor x latent factor - item 이 기존 데이터를 잘 재현 한다면, 결측값도 잘 예측할 수 있다.
+  
+* 한계
+
+  * 내적으로는 벡터간의 유사도를 완전히 표현할 수 없다.
+    * S23(0.66)> S12(0.5)> S13(0.4)
+    * S41(0.6)> S43(0.4)> S42(0.2)
+  * 인기 있는 아이템(성분값이 큰 벡터)는 모든 사람에게 추천할 수 있다.
+
+![](https://user-images.githubusercontent.com/43728746/75696703-5a4a9d80-5cef-11ea-91f4-47253fd10553.png)
 
 ### SVD(Singular value decomposition)
 
@@ -79,22 +88,35 @@ TOC
 
 ## Logistic MF
 
-
+*  Implicit 데이터로 MF 수행
+*  선호도를 0과 1사이의 값으로 가정
 
 ## BPR
 
+* event 가 발생한 item 이 그렇지 않은 item 보다 선호도가 높다는 가정
+* user 별로 item x item matrix 생성
+![](https://user-images.githubusercontent.com/43728746/78500414-28ff3a80-7791-11ea-907f-1316eb3a7c29.PNG)
+* 좋아하는 item 선호도 - 싫어하는 item 선호도가 최대가 되는 방향으로 학습
+  * $>_{u}$: 유저의 선호 정보(유저는 i 보다 j 를 좋아한다)
+  * $p(\Theta)$: 파라메터가 발생할 확률(사전정보)
 
 
+$$
+\begin {align*} & p(\Theta | >_{u})  \propto p(>_{u} | \Theta) \ p(\Theta) \\ \\ \because \ \ p(\Theta | >_{u}) & = \frac{p(\Theta , >_{u})}{ p(>_{u})} = \frac{p(>_{u} | \Theta) p(\Theta)}{ p(>_{u})}  \propto  p(>_{u} | \Theta) \ p(\Theta) \end {align*} \\
+$$
 
+---
 
 * References
   * [Matrix Factorization 기술을 이용한 넷플릭스 추천시스템](https://medium.com/curg/matrix-factorization-%EA%B8%B0%EC%88%A0%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4-%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-7455a40ad527)
+  
   * [Matrix Factorization Techniques for recommender systems](https://datajobs.com/data-science-repo/Recommender-Systems-[Netflix].pdf)
+  
   * [Neural Collaborative Filtering](https://arxiv.org/pdf/1708.05031.pdf)
+
   * [Neural Collaborative Filtering 리뷰](https://leehyejin91.github.io/post-ncf/)
+
   * [03. 협업필터링 기반 추천시스템 - SGD](https://eda-ai-lab.tistory.com/528)
-
+  
   * [Matrix Factorization에 대해 이해, Alternating Least Square (ALS) 이해](https://yeo0.github.io/data/2019/02/23/Recommendation-System_Day8/#_title)
-
-    
-
+  * [[논문 리뷰] Neural Collaborative Filtering](https://leehyejin91.github.io/post-ncf/)
