@@ -105,18 +105,27 @@ $$
 \begin {align*} & p(\Theta | >_{u})  \propto p(>_{u} | \Theta) \ p(\Theta) \\ \\ \because \ \ p(\Theta | >_{u}) & = \frac{p(\Theta , >_{u})}{ p(>_{u})} = \frac{p(>_{u} | \Theta) p(\Theta)}{ p(>_{u})}  \propto  p(>_{u} | \Theta) \ p(\Theta) \end {align*} \\
 $$
 
+```python
+# update using gradient descent
+grad_u = sigmoid_tiled * (item_j - item_i) + self.reg * user_u
+grad_i = sigmoid_tiled * -user_u + self.reg * item_i
+grad_j = sigmoid_tiled * user_u + self.reg * item_j
+self.user_factors[u] -= self.learning_rate * grad_u
+self.item_factors[i] -= self.learning_rate * grad_i
+self.item_factors[j] -= self.learning_rate * grad_j
+```
+
+
+
 ---
 
 * References
   * [Matrix Factorization 기술을 이용한 넷플릭스 추천시스템](https://medium.com/curg/matrix-factorization-%EA%B8%B0%EC%88%A0%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4-%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-7455a40ad527)
-  
   * [Matrix Factorization Techniques for recommender systems](https://datajobs.com/data-science-repo/Recommender-Systems-[Netflix].pdf)
-  
   * [Neural Collaborative Filtering](https://arxiv.org/pdf/1708.05031.pdf)
-
   * [Neural Collaborative Filtering 리뷰](https://leehyejin91.github.io/post-ncf/)
-
   * [03. 협업필터링 기반 추천시스템 - SGD](https://eda-ai-lab.tistory.com/528)
-  
-  * [Matrix Factorization에 대해 이해, Alternating Least Square (ALS) 이해](https://yeo0.github.io/data/2019/02/23/Recommendation-System_Day8/#_title)
+* [Matrix Factorization에 대해 이해, Alternating Least Square (ALS) 이해](https://yeo0.github.io/data/2019/02/23/Recommendation-System_Day8/#_title)
   * [[논문 리뷰] Neural Collaborative Filtering](https://leehyejin91.github.io/post-ncf/)
+
+  * [BPR 코드](http://ethen8181.github.io/machine-learning/recsys/4_bpr.html#Bayesian-Personalized-Ranking)
