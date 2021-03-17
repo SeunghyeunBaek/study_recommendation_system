@@ -17,8 +17,8 @@
 |:---|:---|:---|:---|:---|
 |모델|확률 모델|ㅁ|autoencoder|ㅁ|
 |목적함수|최대우도|RMSE|RMSE|ㅁ|
-|학습방식|Contrastive Divergence|gradient-based|gradient-based|ㅁ|
-|파라메터|ㅁ|ㅁ|ㅁ|ㅁ|
+|학습방식|Contrastive Divergence|gradient-based, linear|gradient-based, nonlinear|gradient-based 가  contrasive divergence 보다 상대적으로 빠름|
+|파라메터|rating 마다 parameter 추정||rating 수에 영향을 받지 않음|AUTOREC 이 RMB에 비해 파라메터 수가 적다|
 |역전파방식|ㅁ|ㅁ|ㅁ|ㅁ|
 |입력데이터|평점|평점, item, user 모두 embedding|agnostic to rating, item, user 둘중 하나만 embedding|AUTOREC 의 파라메터가 더 적음, 과적합 방지|
 |학습요소|ㅁ|Linear|Nonlinear|ㅁ|
@@ -40,3 +40,5 @@
   *  contrasive divergence
 * 최대우도
 * Linear vs Nonlinear
+
+* Discriminate vs Gerative

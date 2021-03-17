@@ -1,0 +1,6 @@
+2021-03-14 08:40:08,859 | dataloader | Load data from /workspace/study_recsys/data/kmrd/kmr_dataset/datafile/kmrd-small
+2021-03-14 08:40:08,860 | dataloader | Train_df: (8000, 4), torch.Size([466])
+2021-03-14 08:40:08,861 | dataloader | Validaetion df: (2000, 4), torch.Size([466])
+2021-03-14 08:59:14,274 | dataloader | Load data from /workspace/study_recsys/data/kmrd/kmr_dataset/datafile/kmrd-small
+2021-03-14 08:59:14,275 | dataloader | Train_df: (8000, 4), torch.Size([466])
+2021-03-14 08:59:14,276 | dataloader | Validaetion df: (2000, 4), torch.Size([466])
