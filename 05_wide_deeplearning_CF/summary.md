@@ -27,7 +27,7 @@
 
 ### Dataset구성
 
-![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\FM_dataset.png)
+![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/FM_dataset.png?raw=true)
 
 * S = {(user, movie, rate)}
 * ST = {(user, movie, rate, time, movie_last, target)}
@@ -69,12 +69,12 @@
 
 * $$O(n^2)$$ ->  $$O(kn)$$
 
-![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\compuation.PNG)
+![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/fm_computation.PNG?raw=true)
 
 * Gradient
   * $$\Sigma_{j=1}^n v_{j,f} x_j $$ 는 $$i$$ 와 상관없이 계산할 수 있음
 
-![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\grdient.PNG)
+![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/fm_gradient.PNG?raw=true)
 
 
 
@@ -82,7 +82,7 @@
 
 * Interaction 항 수에 따라 일반화 할 수 있음
 
-![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\d_way.PNG)
+![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/fm_d_way.PNG?raw=true)
 
 
 
@@ -102,8 +102,8 @@
       * 오류: <span style="color:red">**팽귄 -> 날개 있음 -> 난다**</span>
     * Memorization
       * 학습: 갈매기-> 난다, 비둘기 -> 난다, 참새-> 난다, **팽귄 -> 못난다**
-      * 예측: 갈매기->난다, 비둘기->난다, 참새->난다, **팽귄->못난다**
-      * 오류: **<span style="color:red">타조-> 몰라</span>**
+      * 예측: **팽귄->못난다**
+      * 오류: **<span style="color:red">할미새사촌-> 몰라</span>**
 
   * Gerneralization, Memorization 비교
   
@@ -116,13 +116,13 @@
 
 
 * 더 적은 Parameter 로 학습할 수 있음
-  * ![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\Wide_vs_Deep.PNG)
+  * ![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/wd_concept.PNG?raw=true)
 * Sparse dataset 에서 Embedding 하기 어려움
-  * ![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\wide_vs_deep_specific.PNG)
+  * ![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/wd_concept2.PNG?raw=true)
 
 ### 모델
 
-![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\wide_deep_architecture.PNG)
+![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/wd_model_architecture.PNG?raw=true)
 
 * Linear model과 Neuralnet 을 결합한 형태
 * Ensemble 은 두 모델이 각각 학습하고 예측값만 합치는 형태 / Joint trainning 은 학습 시 두 모델의  Weight를 함께 역전파함
@@ -162,7 +162,7 @@ $$
 
 #### 구조
 
-![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\wide_deep_laerning_architecture.PNG)
+![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/wd_model_architecture_2.PNG?raw=true)
 
 $$
 P(Y=1|x) = \sigma(w^T_{wide}[x, \phi(x)] + w^T_{deep}a^{(l_f)}+b)
@@ -175,7 +175,7 @@ $$
 
 * 검색으로 후보군을 정하고 모델로 순위를 할당함
 
-![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\wid_deep_learning_recommender_system_architecture.PNG)
+![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/wd_system_architecture.PNG?raw=true)
 
 ### 성능
 
