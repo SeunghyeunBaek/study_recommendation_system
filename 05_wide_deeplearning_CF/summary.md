@@ -57,7 +57,7 @@
 
 * $$\hat{w}_{ij}$$ =: $$<v_i, v_j>$$,   $$\hat{w}_{ij} \in R$$
 
-  ![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\Feature_latent_vector.PNG)
+  ![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/fm_latent_vector.PNG?raw=true)
 
   * $$v_i$$: i번 Feature 의 latent vector
   * $$<v_i, v_j> $$: i 번 feature, j 번 feature 간 interaction
@@ -82,6 +82,10 @@
 * Interaction 항 수에 따라 일반화 할 수 있음
 
 ![](https://github.com/SeunghyeunBaek/study_recommendation_system/blob/main/05_wide_deeplearning_CF/image/fm_d_way.PNG?raw=true)
+
+
+
+---
 
 
 
@@ -180,17 +184,20 @@ $$
 
 ![](C:\Users\wonca\OneDrive\바탕 화면\shbaek\git_repository\study_recommendation_system\05_wide_deeplearning_CF\image\wd_performance.PNG)
 
-## 기타 용어 정리
+## 용어
 
 * Factorization machines
   * Support vector machines
   * Positive definite matrix
-  * Transformation in the dual form
-  * Algorithms
-    * PARAFAC
-    * SVM
-    * PITF
-    * SVD ++
+  
+  * PARAFAC
+  
+  * PITF
+  * SVD ++
+  
+* Wide and deep learning
+
+  * 
 
 ## References
 
