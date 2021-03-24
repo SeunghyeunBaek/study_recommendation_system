@@ -1,0 +1,12 @@
+DIRECTORY:
+  original_data: /workspace/study_recsys/data/breast_cancer/original/
+  processed_data: /workspace/study_recsys/data/breast_cancer/processed/
+  result: /workspace/study_recsys/05_widedeepfm/FM/result/
+
+TRAIN:
+  type: float32
+  batch_size: 8
+  epoch: 100
+  k: 10
+  seed: 42
+  

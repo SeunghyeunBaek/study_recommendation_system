@@ -1,13 +1,12 @@
 ## TOC
 
-* [Factorization Machines](## Factorization Machines)
-  * [개요]()
-  * [Dataset구성]()
-  * [모델수식]()
-  * [연산속도향상]()
-  * [일반화(D-way)]()
-  * 성능
-* [Wide & Deep learning](## Wide & Deep learning)
+* Factorization Machines
+  * 개요
+  * Dataset구성
+  * 모델수식
+  * 연산속도향상
+  * 일반화(D-way)
+* Wide & Deep learning
   * 개요
   * 모델 구성
   * 시스템구성
@@ -86,7 +85,7 @@
 
 
 
-## Wide & Deep learning(작성중)
+## Wide & Deep learning
 
 ### 개요
 
